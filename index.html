@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placa de Vídeo MSI GeForce RTX 3050 - OLX</title>
+
+  <link rel="icon" type="image/png" href="R.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+    
+    body { font-family: 'Nunito Sans', sans-serif; }
+    .bg-olx-orange { background-color: #f28000; }
+    .bg-olx-orange:hover { background-color: #e07300; }
+    .text-olx-purple { color: #6e0ad6; }
+    .bg-olx-purple { background-color: #6e0ad6; }
+    .text-olx-green { color: #00a650; }
+    .bg-chat-btn { background-color: #fff8f0; }
+
+    /* Estilos da Tela de Checkout */
+    .checkout-card { border: 1px solid #e5e7eb; border-radius: 8px; background: white; padding: 16px; transition: all 0.2s; }
+    .checkout-card.active { border: 2px solid #6e0ad6; background: #fdfaff; }
+    .checkout-card.disabled { background: #f3f4f6; opacity: 0.7; cursor: not-allowed; }
+    
+    /* Controle das Páginas */
+    .pagina-oculta { display: none !important; }
+  </style>
+</head>
+<body class="bg-[#f9f9f9] text-gray-800 min-h-screen">
+
+  <div id="pagina-produto">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+        
+        <div class="flex items-center gap-4 flex-1 max-w-2xl">
+          <a href="#" class="flex items-center">
+            <img src="R.png" alt="Logo" class="h-9 w-auto object-contain">
+          </a>
+          
+          <div class="relative w-full">
+            <input type="text" placeholder="Buscar 'Placa de vídeo' na OLX..." class="w-full bg-gray-100 border border-gray-300 rounded-full py-2.5 pl-4 pr-12 text-sm focus:outline-none focus:border-purple-600 focus:bg-white transition">
+            <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-orange-500 hover:bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm transition">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm font-medium text-gray-700">
+          <a href="#" class="hidden lg:block hover:text-purple-600 transition">Plano Profissional</a>
+          <a href="#" class="hidden md:block hover:text-purple-600 transition">Meus Anúncios</a>
+          
+          <a href="#" class="relative hover:text-purple-600 transition text-lg flex items-center">
+            <i class="fa-regular fa-comment"></i>
+            <span class="absolute -top-1.5 -right-2 bg-purple-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+          </a>
+
+          <a href="#" class="hover:text-purple-600 transition text-lg flex items-center">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+
+          <div class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition border-l pl-4 border-gray-200">
+          <img 
+src="Mbt.png"
+class="w-8 h-8 rounded-full object-cover"
+alt="Foto MegaByte"> 
+            <span class="hidden sm:inline font-semibold text-sm">MegaByte</span>
+            <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+          </div>
+
+          <button class="bg-olx-orange hover:bg-orange-600 text-white font-bold px-5 py-2 rounded-full transition text-sm shadow-sm">
+            Anunciar grátis
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 pt-4 text-xs text-gray-500 flex gap-2">
+      <a href="#" class="hover:underline">São Paulo</a> &gt; 
+      <a href="#" class="hover:underline">São Paulo e região</a> &gt; 
+      <a href="#" class="hover:underline">Informática</a> &gt; 
+      <a href="#" class="hover:underline">Placas de vídeo</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto my-4 px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <section class="lg:col-span-2 space-y-6">
+        
+        <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+          <div class="bg-gray-50 rounded-xl overflow-hidden flex justify-center items-center h-[420px] border border-gray-100">
+            <img id="fotoPrincipal" src="foto1.jpg.png" onerror="this.src='foto1.jpg'; this.onerror=function(){this.src='foto1.png'}" alt="RTX 3050 MSI" class="object-contain h-full w-full p-2">
+          </div>
+          
+          <div class="grid grid-cols-3 gap-3">
+            <img onclick="trocarFoto(this.src)" 
+                 src="foto1.jpg.png" 
+                 onerror="this.src='foto1.jpg'; this.onerror=function(){this.src='foto1.png'}"
+                 class="h-24 w-full object-contain rounded-xl border border-gray-200 cursor-pointer hover:border-orange-500 transition p-1 bg-white">
+            
+            <img onclick="trocarFoto(this.src)" 
+                 src="foto2.jpg.png" 
+                 onerror="this.src='foto2.jpg'; this.onerror=function(){this.src='foto2.png'}"
+                 class="h-24 w-full object-contain rounded-xl border border-gray-200 cursor-pointer hover:border-orange-500 transition p-1 bg-white">
+            
+            <img onclick="trocarFoto(this.src)" 
+                 src="foto3.jpg.png" 
+                 onerror="this.src='foto3.jpg'; this.onerror=function(){this.src='foto3.png'}"
+                 class="h-24 w-full object-contain rounded-xl border border-gray-200 cursor-pointer hover:border-orange-500 transition p-1 bg-white">
+
+                 <img onclick="trocarFoto(this.src)" 
+src="foto4.jpg.png"
+onerror="this.src='foto4.jpg'; this.onerror=function(){this.src='foto4.png'}"
+class="h-24 w-full object-contain rounded-xl border border-gray-200 cursor-pointer hover:border-orange-500 transition p-1 bg-white">
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+          <h1 class="text-2xl font-bold text-gray-900 mb-1">Smart TV Samsung Crystal UHD 4K U8600F 2025</h1>
+          <p class="text-xs text-gray-400">Publicado em 28/07 às 10:15 - Cód. 129837123</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+          <h3 class="font-bold text-lg border-b pb-3 text-gray-900">Descrição</h3>
+          <p class="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
+            Smart TV Samsung Crystal UHD 4K U8600F 2025.
+
+- Imagem em resolução 4K UHD.
+- Tecnologia Crystal Processor 4K.
+- Sistema Smart TV com diversos aplicativos.
+- Design moderno e fino.
+- Ideal para filmes, séries, esportes e jogos.
+            - Desempenho excelente para jogos atuais em Full HD (1080p).
+            - Suporte a Ray Tracing e DLSS da NVIDIA.
+            - Design Low Profile com Dual Fan, perfeito para gabinetes compactos.
+            - Acompanha caixa original e acessórios completos.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+          <h3 class="font-bold text-lg border-b pb-3 text-gray-900">Detalhes</h3>
+          <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-sm">
+            <div><span class="text-gray-400">Marca:</span> <span class="font-medium text-gray-800">MSI</span></div>
+            <div><span class="text-gray-400">Modelo:</span> <span class="font-medium text-gray-800">RTX 3050 LP 6GB</span></div>
+            <div><span class="text-gray-400">Memória:</span> <span class="font-medium text-gray-800">6GB GDDR6</span></div>
+            <div><span class="text-gray-400">Condição:</span> <span class="font-medium text-gray-800">Usado - Excelente</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+          <div>
+            <span class="text-sm text-gray-400 line-through font-semibold">R$ 1.250</span>
+            <div class="text-3xl font-black text-gray-900 flex items-baseline gap-2 mt-0.5">
+              R$ 1.100 <span class="text-sm font-bold text-olx-green">no Pix</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 pt-1">
+            <span class="bg-[#32BCAD] text-white text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+              <i class="fa-solid fa-pix text-xs"></i> Pix
+            </span>
+            <span class="bg-[#8A05BE] text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm">
+              nubank
+            </span>
+            <span class="bg-[#1A1F71] text-white text-[11px] font-bold px-2 py-1 rounded italic shadow-sm">
+              VISA
+            </span>
+            <span class="bg-[#EB001B] text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm">
+              mastercard
+            </span>
+            <span class="bg-[#000000] text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm">
+              elo
+            </span>
+          </div>
+
+          <div>
+            <p class="text-sm font-bold text-gray-800">10x sem juros de R$ 110,00</p>
+            <a href="#" class="text-xs font-bold text-olx-purple hover:underline">Mais opções de parcelamento</a>
+          </div>
+
+          <div class="space-y-2 pt-1 border-t border-gray-100">
+            <a href="#" class="text-sm font-bold text-olx-purple hover:underline flex items-center gap-2">
+              <i class="fa-solid fa-hand-holding-dollar text-base"></i> Fazer oferta
+            </a>
+            <a href="#" class="text-sm font-bold text-olx-purple hover:underline flex items-center gap-2">
+              <i class="fa-solid fa-arrows-rotate text-base"></i> Simular empréstimo
+            </a>
+          </div>
+
+          <hr class="border-gray-200">
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-bold text-gray-800">Calcule o frete</span>
+              <a href="#" class="text-xs font-bold text-olx-purple hover:underline">Não sei meu CEP</a>
+            </div>
+
+  <div class="flex gap-2">
+
+    <input 
+    id="cep"
+    type="text"
+    placeholder="Digite seu CEP"
+    class="w-full border border-gray-300 p-3 rounded-xl text-sm text-gray-700 focus:outline-none focus:border-orange-500">
+
+
+    <button 
+    onclick="calcularFrete()"
+    class="bg-orange-500 text-white px-4 rounded-xl font-bold">
+
+    OK
+
+    </button>
+
+  </div>
+
+
+  <p id="resultadoFrete" class="text-green-600 font-bold text-sm mt-2"></p>
+
+</div>
+          </div>
+
+          <a href="checkout.html" class="w-full bg-olx-orange hover:bg-orange-600 text-white font-bold py-3.5 rounded-full shadow-sm transition flex justify-center items-center gap-2 text-base">
+            <i class="fa-solid fa-cart-shopping"></i> Comprar
+          </a>
+
+          <button class="w-full bg-chat-btn text-orange-600 hover:bg-orange-100 font-bold py-3.5 rounded-full transition flex justify-center items-center gap-2 text-base border border-orange-200">
+            <i class="fa-regular fa-comment-dots"></i> Chat
+          </button>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center text-xl font-bold">
+              MS
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">MegaByte Store</h4>
+<p class="text-xs text-gray-500">
+Loja oficial MegaByte Store
+</p>
+
+</div>
+</div>
+
+</section>
+
+</main>
+
+
+<script>
+
+function calcularFrete(){
+
+let cep = document.getElementById("cep").value;
+
+
+if(cep.length < 8){
+
+document.getElementById("resultadoFrete").innerHTML =
+"Digite um CEP válido";
+
+return;
+
+}
+
+
+document.getElementById("resultadoFrete").innerHTML =
+"Frete grátis para este endereço";
+
+}
+
+</script>
+
+
+<footer class="bg-white border-t mt-10 p-6 text-center">
+
+<img src="R.png" style="height:45px;margin:auto;">
+
+<p class="text-gray-500 text-sm mt-3">
+MegaByte Store © 2026
+</p>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>
