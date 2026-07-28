@@ -91,7 +91,7 @@ alt="Foto MegaByte">
       <section class="lg:col-span-2 space-y-6">
         
         <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-          <div class="bg-gray-50 rounded-xl overflow-hidden flex justify-center items-center h-[420px] border border-gray-100">
+          <div onclick="abrirImagem()" class="bg-gray-50 rounded-xl overflow-hidden flex justify-center items-center h-[420px] border border-gray-100 cursor-pointer">
             <img id="fotoPrincipal" src="foto1.jpg.png" onerror="this.src='foto1.jpg'; this.onerror=function(){this.src='foto1.png'}" alt="RTX 3050 MSI" class="object-contain h-full w-full p-2">
           </div>
           
@@ -285,6 +285,11 @@ Loja oficial MegaByte Store
 
 
 <script>
+  function trocarFoto(imagem){
+
+    document.getElementById("fotoPrincipal").src = imagem;
+
+}
 
 function calcularFrete(){
 
@@ -318,7 +323,46 @@ MegaByte Store © 2026
 </p>
 
 </footer>
+<!-- Tela cheia da imagem -->
+<div id="modalImagem" 
+class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50"
+onclick="fecharImagem()">
 
+  <img id="imagemGrande"
+  class="max-h-[90%] max-w-[90%] object-contain rounded-xl">
+
+</div>
+
+
+<script>
+
+function trocarFoto(imagem){
+    document.getElementById("fotoPrincipal").src = imagem;
+}
+
+
+function abrirImagem(){
+
+    let imagem = document.getElementById("fotoPrincipal").src;
+
+    document.getElementById("imagemGrande").src = imagem;
+
+    document.getElementById("modalImagem").classList.remove("hidden");
+
+    document.getElementById("modalImagem").classList.add("flex");
+
+}
+
+
+function fecharImagem(){
+
+    document.getElementById("modalImagem").classList.add("hidden");
+
+    document.getElementById("modalImagem").classList.remove("flex");
+
+}
+
+</script>
 
 </div>
 
